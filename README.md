@@ -41,9 +41,5 @@ U ovom folderu se nalaze gotovi primeri dobre prakse:
 │   └── ARCHITECTURE.md                # Arhitektura sistema i mapa foldera
 └── .agents/
     └── skills/
-        ├── db-migration/SKILL.md      # Primer višekratne veštine za migracije
         └── init-ai-docs/SKILL.md      # Lokalna kopija skila za generisanje dokumentacije
 ```
-
-> **Napomena o lokaciji skila:**  
-> Skil `init-ai-docs` je instaliran i globalno u `~/.gemini/config/skills/init-ai-docs/SKILL.md`, što znači da je dostupan u svakom projektu na vašem računaru.
