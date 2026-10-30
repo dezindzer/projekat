@@ -20,7 +20,15 @@ Ovaj dokument definiše standarde koje AI asistent MORA poštovati pri generisan
 - Bazi pristupati isključivo kroz Prisma repozitorijume u `src/server/db/`.
 - Sve greške u API rutama moraju vraćati standardizovan JSON format: `{ error: string, code: number }`.
 
-## 4. Validacija rada
+## 4. Validacija rada, Build i Delivery ciklus
 Nakon svake izmene koda, proveri sledeće komande:
 - `npm run type-check` (mora proći bez grešaka)
 - `npx vitest run <izmenjeni-fajl>.test.ts` (test mora prolaziti)
+- `npm run build` (produkciona kompilacija mora proći sa 0 grešaka)
+
+### Release, Verzionisanje i Pakovanje:
+Nakon završenih funkcionalnih izmena ili pripreme nove verzije:
+1. Inkrementirati verziju u `package.json`.
+2. Na sam vrh fajla `updates.md` dodati novu sekciju sa datumom i detaljnim spiskom svih izmena.
+3. **Pakovanje (.7z):** Ukoliko se generiše publish/distributivni paket sa više fajlova (npr. `dist/` ili standalone build), zapakovati sadržaj u `.7z` arhivu sa formatom naziva:
+   `%version% - publish %datetime%.7z` (npr. `1.0.0.1 - publish 20261030-145046.7z`).

@@ -22,9 +22,10 @@ Pre kreiranja bilo kog fajla, asistent automatski istražuje strukturu koda i ko
 Na osnovu prepoznatog stanja, kreira skup fajlova potpuno prilagođenih tom konkretnom projektu:
 1. `README.md` – Pregled projekta, tačan tech stack i komande za brzi start i pokretanje.
 2. `AGENTS.md` – Pravila stila koda, arhitektonska ograničenja, zabrane za AI i komande za validaciju.
-3. `docs/ARCHITECTURE.md` – Konceptualna mapa sistema, svrha direktorijuma i tokovi podataka.
+3. `ARCHITECTURE.md` – Konceptualna mapa sistema, svrha direktorijuma i tokovi podataka.
 4. `TESTING.md` – Tačne komande za pokretanje (posebno za izolovani test) i primer ispravnog testa.
 5. `TASK.md` – Interaktivna lista zadataka za održavanje konteksta kroz višestruke sesije.
+6. `UPDATES.md` – Hronološki dnevnik verzija i zabeleženih izmena (changelog).
 
 ---
 
@@ -37,8 +38,8 @@ U ovom folderu se nalaze gotovi primeri dobre prakse:
 ├── AGENTS.md                          # Pravila ponašanja i standardi za AI
 ├── TESTING.md                         # Strategija testiranja i komande
 ├── TASK.md                            # Praćenje faza rada i statusa zadataka
-├── docs/
-│   └── ARCHITECTURE.md                # Arhitektura sistema i mapa foldera
+├── ARCHITECTURE.md                    # Arhitektura sistema i mapa foldera
+├── UPDATES.md                         # Dnevnik izmena po verzijama (changelog)
 └── .agents/
     └── skills/
         └── init-ai-docs/SKILL.md      # Lokalna kopija skila za generisanje dokumentacije
