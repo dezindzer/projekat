@@ -20,3 +20,6 @@
 
 ## Poznate prepreke / Beleške
 - Webhook potpis (secret) mora biti podešen u `.env.local` pre lokalnog testiranja preko Stripe CLI.
+
+## Naučene lekcije i retrospektiva
+- Pre pokretanja integracionih testova, osigurati pokrenut lokalni Stripe CLI listener (`stripe listen`) radi stabilnosti webhook okruženja.

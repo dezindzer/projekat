@@ -32,3 +32,14 @@ Nakon završenih funkcionalnih izmena ili pripreme nove verzije:
 2. Na sam vrh fajla `updates.md` dodati novu sekciju sa datumom i detaljnim spiskom svih izmena.
 3. **Pakovanje (.7z):** Ukoliko se generiše publish/distributivni paket sa više fajlova (npr. `dist/` ili standalone build), zapakovati sadržaj u `.7z` arhivu sa formatom naziva:
    `%version% - publish %datetime%.7z` (npr. `1.0.0.1 - publish 20261030-145046.7z`).
+
+## 5. Protokol za samoučenje i kontinuirano poboljšanje
+- **Trajno beleženje ispravki korisnika:** Kada korisnik ispravi rad agenta ili ukaže na lokalnu specifičnost, asistent je dužan da to pravilo odmah trajno zabeleži u podsekciju `### Naučene lekcije i specifičnosti projekta` ispod (ili preporuči `/learn` komandu) kako se greška nikada ne bi ponovila u budućim sesijama.
+- **Samokritičnost i provera pre predaje (Self-Review):** Pre završetka rada na svakom zadatku, agent postavlja sebi tri kontrolna pitanja:
+  1. Jesam li doneo neproverenu pretpostavku o kodu ili okruženju?
+  2. Da li postoje neobrađeni granični slučajevi (edge-cases) ili rizik od curenja resursa/memorije?
+  3. Da li kod u potpunosti poštuje pravila tipizacije i arhitekture?
+- **Proaktivno unapređenje dokumentacije:** Ako agent uoči pod-dokumentovan deo koda ili priliku za optimizaciju, predlaže dopunu `ARCHITECTURE.md` ili `README.md`.
+
+### Naučene lekcije i specifičnosti projekta:
+- *(Ova sekcija se dinamički dopunjuje svakom novom ispravkom od strane korisnika ili rešenim netrivijalnim problemom)*

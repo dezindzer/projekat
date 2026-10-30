@@ -1,6 +1,6 @@
 ---
 name: init-ai-docs
-description: Automatski analizira bilo koji projekat i generiše optimalne .md fajlove (README.md, AGENTS.md, ARCHITECTURE.md, TESTING.md, TASK.md, UPDATES.md) prilagođene pronađenom tech stack-u, arhetipu i strukturi.
+description: Automatski analizira bilo koji projekat i generiše optimalne .md fajlove (README.md, AGENTS.md, ARCHITECTURE.md, TESTING.md, TASK.md, updates.md) prilagođene pronađenom tech stack-u, arhetipu i strukturi, sa ugrađenim protokolom za samoučenje i samopoboljšanje.
 ---
 
 # Uputstvo za kreiranje optimalnih AI .md fajlova na projektu
@@ -56,7 +56,7 @@ Na osnovu prikupljenih podataka kreiraj ili uskladi sledećih **6 ključnih fajl
 ---
 
 ### 2. `AGENTS.md` (u root direktorijumu)
-Ovo je ustav i operativni priručnik za AI agente. Struktura **mora** sadržati sledećih 5 sekcija:
+Ovo je ustav i operativni priručnik za AI agente. Struktura **mora** sadržati sledećih 6 sekcija:
 
 1. **Granice projekta i opšta pravila ponašanja:**
    - Pre predlaganja većih izmena arhitekture, objasniti plan i zatražiti potvrdu.
@@ -94,6 +94,17 @@ Ovo je ustav i operativni priručnik za AI agente. Struktura **mora** sadržati 
 
 ---
 
+6. **Protokol za samoučenje i kontinuirano poboljšanje (Self-Learning & Feedback Loop):**
+   - *Trajno beleženje ispravki korisnika:* Kada korisnik ispravi agenta ili ukaže na lokalnu specifičnost, agent ima obavezu da to znanje odmah trajno zabeleži u podsekciju `### Naučene lekcije i specifičnosti projekta` unutar `AGENTS.md` (ili preporuči `/learn` komandu). Zabranjeno je ponavljati istu ispravljenu grešku u narednim sesijama.
+   - *Analiza korena uzroka (Root Cause Analysis):* Kada dođe do greške ili neočekivanog ponašanja, agent ne rešava samo simptom površinski, već preispituje pretpostavku koja je do greške dovela i dopunjuje pravila u `AGENTS.md` kako bi se sprečili slični propusti.
+   - *Samoevaluacija pre završetka rada (Self-Review Checklist):* Pre nego što označi zadatak završenim, agent postavlja sebi tri kontrolna pitanja:
+     1. Da li sam doneo neproverenu pretpostavku o kodu ili okruženju?
+     2. Da li postoje neobrađeni granični slučajevi (edge-cases) ili rizik od curenja resursa/memorije?
+     3. Da li je rešenje u potpunosti usklađeno sa pravilima iz `AGENTS.md` i `ARCHITECTURE.md`?
+   - *Proaktivno unapređenje dokumentacije:* Ako agent uoči pod-dokumentovan deo koda ili zastarela pravila, predlaže dopunu `ARCHITECTURE.md` ili `README.md`.
+
+---
+
 ### 3. `ARCHITECTURE.md` (u root direktorijumu)
 - **Pregled strukture direktorijuma:** Stablo sa opisom ključnih modula/foldera i njihovih odgovornosti.
 - **Arhitektonski model (prilagođen arhetipu):**
@@ -126,11 +137,12 @@ Ovo je ustav i operativni priručnik za AI agente. Struktura **mora** sadržati 
   - **Trenutni status:** Faza u kojoj se projekat trenutno nalazi.
   - **Checklista radnih stavki (`[ ]` / `[x]`):** Planirani koraci, implementacije novih funkcija ili refaktorisanja.
   - **Poznate napomene i dug (Technical Debt):** Specifičnosti sistema, privremena ograničenja ili kritične tačke na koje treba obratiti pažnju.
+  - **Naučene lekcije i retrospektiva:** Beleške o specifičnim preprekama na koje se naišlo tokom zadatka i kako su prevaziđene kako bi kontekst ostao sačuvan za naredne sesije.
 
 ---
 
-### 6. `UPDATES.md` (u root direktorijumu)
-`UPDATES.md` služi kao formalni, trajni dnevnik izmena (changelog) projekta koji prate i održavaju AI agenti i tim:
+### 6. `updates.md` (u root direktorijumu)
+`updates.md` služi kao formalni, trajni dnevnik izmena (changelog) projekta koji prate i održavaju AI agenti i tim:
 - **Pravilo pozicioniranja:** Svaka nova verzija/izmena dodaje se **na sam vrh** fajla (hronološki unazad).
 - **Format zapisa svake verzije:**
   ```markdown
@@ -156,8 +168,18 @@ Nakon kreiranja ili osvežavanja dokumentacije:
    - [`ARCHITECTURE.md`](file:///ARCHITECTURE.md)
    - [`TESTING.md`](file:///TESTING.md)
    - [`TASK.md`](file:///TASK.md)
-   - [`UPDATES.md`](file:///UPDATES.md)
+   - [`updates.md`](file:///updates.md)
 2. Sažeto navedi:
    - Koji je arhetip projekta prepoznat.
    - Koje su ključne tehnologije, alati i mehanizmi validacije ugrađeni u pravila.
    - Koje su specifične bezbednosne zabrane i release koraci definisani.
+
+---
+
+## Korak 4: Samousavršavanje samog skila (Skill Self-Evolution)
+
+Ovaj skil nije statičan. Kada agent na novom projektu prepozna:
+1. Novu tehnologiju, biblioteku ili radni okvir koji nije pokriven u arhetipovima,
+2. Novu komandu za build, test, linter ili pakovanje,
+3. Novu specifičnu bezbednosnu restrikciju ili delivery proces,
+agent je dužan da proaktivno korisniku predloži **ažuriranje samog `init-ai-docs/SKILL.md` fajla** sa tim obrascima, kako bi svi budući projekti imali korist od tog novog znanja i kako bi sistem kontinuirano napredovao.
