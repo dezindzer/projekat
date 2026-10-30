@@ -1,6 +1,6 @@
 ---
 name: init-ai-docs
-description: Automatski analizira bilo koji projekat i generiše optimalne .md fajlove (README.md, AGENTS.md, ARCHITECTURE.md, TESTING.md, TASK.md, updates.md) prilagođene pronađenom tech stack-u, arhetipu i strukturi.
+description: Automatski analizira bilo koji projekat i generiše optimalne .md fajlove (README.md, AGENTS.md, ARCHITECTURE.md, TESTING.md, TASK.md, UPDATES.md) prilagođene pronađenom tech stack-u, arhetipu i strukturi.
 ---
 
 # Uputstvo za kreiranje optimalnih AI .md fajlova na projektu
